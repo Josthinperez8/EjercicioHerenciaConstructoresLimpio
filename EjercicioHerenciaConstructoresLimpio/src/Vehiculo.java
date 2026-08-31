@@ -1,12 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-
-/**
- *
- * @author uestudiantes
- */
 class Vehiculo {
     protected String marca;
     protected int anioFabricacion;
@@ -37,7 +28,7 @@ class Vehiculo {
         this.marca = marca;
         this.anioFabricacion = anioFabricacion;
         this.importado = importado;
-        this.precioBase = precioBase * (importado = true ? 1.19 : 1.0);
+        this.precioBase = precioBase * (importado ? 1.19 : 1.0);
     }
 
     public String getMarca() {
@@ -45,7 +36,6 @@ class Vehiculo {
     }
 
     public double getPrecioBase() {
-        double precioBase = 0;
         return precioBase;
     }
 
@@ -56,7 +46,7 @@ class Vehiculo {
     @Override
     public boolean equals(Object obj) {
         Vehiculo otro = (Vehiculo) obj;
-        return this.marca == otro.marca;
+        return this.marca.equals(otro.marca);
     }
 
     @Override
